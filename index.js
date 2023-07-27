@@ -1,10 +1,8 @@
 
+var x = document.querySelectorAll(".drum"); // querySelectorAll contains array 
 
-let x = document.querySelectorAll(".drum");
-
-for (let index = 0; index < x.length; index++) {
-    document.querySelectorAll(".drum")[index].addEventListener("click", function () {
-        alert("U click me!")
+for (var i = 0; i < x.length; i++) {
+    document.querySelectorAll(".drum")[i].addEventListener("click", function () {
+        alert("Clicked!")
     });
 }
-
