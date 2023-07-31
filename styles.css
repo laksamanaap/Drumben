@@ -1,13 +1,11 @@
 body {
   text-align: center;
-  background-color: #283149;
+  background-color: rgba(179, 255, 255, 0.785);
 }
 
 h1 {
   font-size: 5rem;
-  color: #DBEDF3;
   font-family: "Arvo", cursive;
-  text-shadow: 3px 0 #DA0463;
 
 }
 
