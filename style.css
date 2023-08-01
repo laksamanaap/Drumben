@@ -1,7 +1,7 @@
 body {
     text-align: center;
     background-color: rgba(179, 255, 255, 0.785);
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
 }
 
 h1 {
@@ -98,6 +98,7 @@ footer {
 }
 
 .text {
+    font-family: 'Poppins';
     position: absolute;
     bottom: 0;
     margin: 0;
