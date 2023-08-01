@@ -54,6 +54,7 @@ footer {
 .set {
     margin-top: 10%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
