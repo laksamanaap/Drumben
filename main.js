@@ -9,11 +9,15 @@ var drum = document.querySelectorAll(".drum"); // => Get drum
 //     });
 // }
 
-for (let i = 0; i < drum.length; i++) {
-    document.querySelectorAll(".drum")[i].addEventListener("click", function (e) {
-        var sound = new Audio("sounds/crash.mp3");
-        sound.play();
-        console.log(e);
+for (var i = 0; i < drum.length; i++) {
+    let x = document.querySelectorAll('.text')[i];
+    let y = x.innerHTML;
+    console.log(y);
+
+    document.querySelectorAll(".drum")[i].addEventListener("click", function () {
+        var toggle = y;
+        setSound(toggle);
+        buttonActive(toggle);
     });
 } // => get all button
 
@@ -69,6 +73,7 @@ function buttonActive(currentKey) {
 
     var buttonPress = document.querySelector('.' + currentKey);
     buttonPress.classList.add('pressed');
+
     // console.log(currentKey + ' pressed'); // Check params
 
     setTimeout(() => {
