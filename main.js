@@ -12,10 +12,12 @@ var drum = document.querySelectorAll(".drum"); // => Get drum
 for (let i = 0; i < drum.length; i++) {
     document.querySelectorAll(".drum")[i].addEventListener("click", function () {
         var toggle = this.innerHTML;
-        setSound(toggle);       
-        // alert("tes");
+        setSound(toggle);
+        // var sound = new Audio("sounds/crash.mp3");
+        // sound.play();
+        // console.log(e);
     });
-}
+} // => get all button
 
 document.addEventListener("keydown", function (e) {
     setSound(e.key);
