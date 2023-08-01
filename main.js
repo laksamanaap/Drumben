@@ -1,6 +1,5 @@
 
 var drum = document.querySelectorAll(".drum"); // => Get drum
-let drumActive = document.querySelectorAll(".drum"); // => Get drum
 
 // for (let i = 0; i < drumActive.length; i++) {
 //     drumActive[i].addEventListener("click", function () {
@@ -11,17 +10,17 @@ let drumActive = document.querySelectorAll(".drum"); // => Get drum
 // }
 
 for (let i = 0; i < drum.length; i++) {
-    document.querySelectorAll(".drum")[i].addEventListener("click", function (click) {
-        var press = this.innerHTML;
-        setSound(press);
+    document.querySelectorAll(".drum")[i].addEventListener("click", function () {
+        var toggle = this.innerHTML;
+        setSound(toggle);       
+        // alert("tes");
     });
-} // => Click function
+}
 
-for (var i = 0; i < drum.length; i++) {
-    document.querySelectorAll(".drum")[i].addEventListener("keydown", function (press) { // => Get all drum
-        setSound(press.key);
-    });
-} // => Pressed Function
+document.addEventListener("keydown", function (e) {
+    setSound(e.key);
+    // console.log(e) // => Check params
+});
 
 function setSound(key) {
     switch (key) { // Specify the drum using swith
