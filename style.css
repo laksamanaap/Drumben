@@ -1,11 +1,12 @@
 body {
     text-align: center;
     background-color: rgba(179, 255, 255, 0.785);
+    font-family: "Poppins";
 }
 
 h1 {
     font-size: 5rem;
-    font-family: "Poppins";
+
     color: #7AC6DE;
     text-shadow: 4px 0 #00073a;
 
