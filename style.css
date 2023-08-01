@@ -66,8 +66,10 @@ footer {
 }
 
 .pressed {
-    box-shadow: 0 3px 4px 0 #DBEDF3;
-    opacity: 0.5;
+    box-shadow: 0 3px 4px 0 #0000005c;
+    opacity: 0.7;
+    transform: translateY(-10px);
+    transition: 0.2s ease-out;
 }
 
 .red {

@@ -10,17 +10,16 @@ var drum = document.querySelectorAll(".drum"); // => Get drum
 // }
 
 for (let i = 0; i < drum.length; i++) {
-    document.querySelectorAll(".drum")[i].addEventListener("click", function () {
-        var toggle = this.innerHTML;
-        setSound(toggle);
-        // var sound = new Audio("sounds/crash.mp3");
-        // sound.play();
-        // console.log(e);
+    document.querySelectorAll(".drum")[i].addEventListener("click", function (e) {
+        var sound = new Audio("sounds/crash.mp3");
+        sound.play();
+        console.log(e);
     });
 } // => get all button
 
 document.addEventListener("keydown", function (e) {
     setSound(e.key);
+    buttonActive(e.key);
     // console.log(e) // => Check params
 });
 
@@ -66,3 +65,13 @@ function setSound(key) {
     }
 }
 
+function buttonActive(currentKey) {
+
+    var buttonPress = document.querySelector('.' + currentKey);
+    buttonPress.classList.add('pressed');
+    // console.log(currentKey + ' pressed'); // Check params
+
+    setTimeout(() => {
+        buttonPress.classList.remove('pressed');
+    }, 100);
+}
