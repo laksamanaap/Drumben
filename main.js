@@ -14,14 +14,14 @@ for (var i = 0; i < drum.length; i++) {
     let y = x.innerHTML;
     console.log(y);
 
-    document.querySelectorAll(".drum")[i].addEventListener("click", function () {
+    document.querySelectorAll(".drum")[i].addEventListener("click", () => {
         var toggle = y;
         setSound(toggle);
         buttonActive(toggle);
     });
 } // => get all button
 
-document.addEventListener("keydown", function (e) {
+document.addEventListener("keydown", (e) => {
     setSound(e.key);
     buttonActive(e.key);
     // console.log(e) // => Check params
